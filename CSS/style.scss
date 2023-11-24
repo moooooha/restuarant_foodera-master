@@ -1,0 +1,479 @@
+$pink-color:#A82D49;
+$head-color:#611325;
+$gray-color:rgb(108,99,99);
+$main-border :3px solid $pink-color;
+
+
+
+.btn-main{
+    font-size: 20px;
+    margin: 10px;
+    background-color: $pink-color;
+    color: #fff;
+    text-align: center;
+    padding: 10px 50px;
+    border:$main-border;
+    &:hover{
+        background-color: #fff;
+        color: $pink-color;
+        border:$main-border;
+
+    }
+}
+
+*{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+    ::selection{
+        color: #fff;
+        background-color: $head-color;
+    }
+}
+body{
+    overflow: hidden;
+}
+.loading{
+    background-color: #111;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .loader {
+        width: 64px;
+        height: 48px;
+        position: relative;
+        animation: split 1s ease-in infinite alternate;
+      }
+      .loader::before , .loader::after {
+        content: '';
+        position: absolute;
+        height: 48px;
+        width: 48px;
+        border-radius: 50%;
+        left: 0;
+        top: 0;
+        transform: translateX(-10px);
+        background: $pink-color;
+        opacity: 0.75;
+        backdrop-filter: blur(20px);
+      }
+      
+      .loader::after {
+        left: auto;
+        right: 0;
+        background: #FFF;
+        transform: translateX(10px);
+      }
+      
+      @keyframes split {
+       0% , 25%{ width: 64px }
+       100%{ width: 148px }
+      }
+        
+}
+#header{
+    .nav-ul{
+        .nav-item{
+            padding: 10px 5px;
+            a{
+                color: $pink-color;
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 27px;
+            }
+            button{
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 27px;
+                background-color: $pink-color;
+                color: #fff;
+                border:$main-border;
+                &:hover{
+                    background-color: #fff;
+                    color: $pink-color;
+                }
+            }
+        }
+    }
+}
+
+#home{
+    width: 100%;
+    min-height: 120vh;
+    background-image: url('../images/loadingImage.12c392d279429f82935c.jpg');
+    background-size: 100% 100%;
+
+
+    .details{
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        h1{
+            margin-top: 20px;
+            padding: 10px;
+            font-weight: 700;
+            font-size: 50px;
+            line-height: 60px;
+            color: $head-color;
+        }
+        p{
+            font-weight:400;
+            font-size:16px;
+            line-height: 24px;
+            color: $gray-color;
+            padding: 10px;
+        }
+
+        .btn2{
+            font-size: 20px;
+            margin: 10px;
+            color: $pink-color;
+            background-color: #fff;
+            border: 2px solid #fff;
+            padding: 10px 50px;
+            box-shadow: 0 3px 8px rgba(0,0,0,.24);
+            &:hover{
+                border: 2px solid $pink-color;
+            }
+        }
+    }
+}
+
+.active-link{
+    background-color: #111;
+    color: $pink-color;
+    padding: 10px;
+    border: 1px solid $pink-color;
+}
+#counter{
+    width: 100%;
+    min-height: 20vh;
+    background-color: $pink-color;
+    color: #fff;
+    padding: 10px;
+
+    .items{
+        text-align: center;
+        padding: 20px;
+
+        div i{
+            font-size: 30px;
+            padding: 20px;
+        }
+
+        h2{
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 36px;
+        }
+        h6{
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
+}
+
+#about{
+    width: 100%;
+    min-height:200vh;
+    padding: 40px 20px;
+    .image{
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .text{
+        padding: 10px;
+        text-align: center;
+        h2{
+            text-align: center;
+            font-weight: 700;
+            font-size: 38px;
+            line-height: 46px;
+            color: $head-color;
+            margin: 10px;
+        }
+        p{
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 27px;
+            color: $gray-color;
+        }
+
+    }
+
+    .txt{
+        padding: 10px;
+        h2{
+            font-weight: 700;
+            font-size: 38px;
+            line-height: 46px;
+            color: $head-color;
+            width: 100%;
+        }
+        p{
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 27px;
+            color: $gray-color;
+            padding: 10px;
+        }
+        .line{
+                span{
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 27px;
+                    color: $gray-color;
+                    i{
+                    color: $pink-color;
+                    padding: 10px;
+                }
+            }
+        }
+
+        }
+    }
+
+.foot{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    min-height: 50vh;
+    background-image: url('../images/1.8dac9ee9eb3e67760871.jpg');
+    background-size: cover;
+    background-position: center;
+
+    h2{
+        font-weight: 700;
+        font-size: 38px;
+        line-height: 46px;
+        color: $head-color;
+        width: 100%;
+        padding: 10px 20px;
+    }
+    p{
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+        color: $gray-color;
+        padding: 10px;
+    }
+}
+
+#explore{
+    .title{
+        h2{
+            text-align: center;
+            font-weight: 700;
+            font-size: 38px;
+            line-height: 46px;
+            color: $head-color;
+            margin: 10px;
+        }
+        p{
+            text-align: center;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 27px;
+            color: $gray-color;
+            padding: 10px;
+        }
+    }
+    .card-body{
+        h5{
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 24px;
+            color: rgb(33,37,41);
+        }
+        p{
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: rgb(33,37,41);
+        }
+        div{
+            .span1{
+                padding: 10px;
+                font-weight: 700;
+                font-size: 30px;
+                line-height: 45px;
+                color: $head-color;
+                margin: 10px;
+            }
+            .span2{
+                margin: 10px;
+                padding: 10px;
+                font-weight: 700;
+                font-size: 30px;
+                line-height: 45px;
+                color: $gray-color;
+                text-decoration: line-through;
+            }
+        }
+
+    }
+}
+
+#reviews{
+    width: 100%;
+    min-height: 80vh;
+    background-color: $head-color;
+    margin: 120px 0 0;
+    padding: 30px 0;
+    text-align: center;
+
+    
+    p{
+        color: #111;
+        font-size: 21px;
+        font-weight: 300;
+        letter-spacing: 0;
+        line-height: 33px;
+        padding: 0 21% 20px;
+    }
+
+    h5{
+        color:$pink-color ;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: .2px;
+        text-transform: capitalize;
+
+    }
+
+    h2{
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 58px;
+        color: #fff;
+        padding: 10px;
+    }
+
+   
+        .carsouel-img img{
+            width: 80px !important;
+            height: 80px !important;
+            border-radius: 50% !important;
+            display: block;
+            margin: auto;
+        }
+
+
+}
+    
+
+
+
+#faq{
+    .container-fluid{
+        width: 90% ;
+        margin: auto;
+        h2{
+            margin-top: 40px;
+            color: $head-color;
+            font-weight:700 ;
+            font-size: 48px;
+            line-height: 58px;
+            text-align: center;
+        }
+        .item{ 
+        margin: 10px;
+        padding: 20px;
+            h3{
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            color: $head-color;
+            
+        }
+            p{
+                padding: 10px;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 27px;
+                color: $gray-color;
+            }
+    }
+}
+}
+
+#faq-foot{
+    .overlay{
+    width: 100%;
+    height: 20vh;
+    background:linear-gradient(#0000005e ,#0000005e), url("../images/food.580213ab4b0ed0a48210.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+    h2{
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 34px;
+        color: #fff;
+        }
+  }
+
+  .container{
+    text-align: center;
+
+    h2{
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 48px;
+        color: $head-color;
+        padding: 10px;
+    }
+    p{
+        font-weight:400;
+        font-size:18px;
+        line-height:27px;
+    }
+    .form{
+
+        input{
+            width: 100%;
+            padding: 10px;
+            height: 55px;
+            margin-top: 10px;
+            ::placeholder{
+                color: $gray-color;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+    }
+
+    margin-bottom: 60px;
+
+  }
+
+  .aut{
+
+    background-color: #A82D49;
+    padding: 20px;
+    text-align: center;
+    h5{
+        font-weight: 500;
+        font-size:15px ;
+        line-height: 18px;
+        color: #fff;
+    }
+  }
+}
+@media (max-width: 676px){
+#header {
+    text-align: center !important;
+}
+}
